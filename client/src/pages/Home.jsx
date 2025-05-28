@@ -13,7 +13,7 @@ export default function Home() {
         <button className="px-8 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition font-semibold text-lg cursor-pointer">
           Get Started
         </button>
-        <button className="px-8 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg shadow hover:bg-blue-50 transition font-semibold text-lg cursor-pointer">
+        <button className="px-8 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg shadow hover:bg-blue-50 transition font-semibold text-lg ">
           Sign In
         </button>
       </div>
