@@ -1,13 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import Login from './pages/Login'
+
 import Approute from './Route/Approute'
 
+import {BrowserRouter} from 'react-router-dom'
 function App() {
  
   return (
     <>
-      <Approute />
+      <BrowserRouter>
+      
+        <Approute></Approute>
+      </BrowserRouter>
     </>
   )
 }
