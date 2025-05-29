@@ -9,7 +9,7 @@ export default function PageNotFound() {
         Sorry, the page you are looking for does not exist or has been moved.
       </p>
       <a
-        href="./Home"
+        href="/"
         className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition font-semibold"
       >
         Go Home
