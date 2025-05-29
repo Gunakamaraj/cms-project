@@ -11,7 +11,7 @@ export default function Layout() {
           <div className="flex items-center space-x-2 mb-4 sm:mb-0">
             <svg width="36" height="36" viewBox="0 0 56 56" fill="none">
               <rect width="56" height="56" rx="12" fill="#2563EB"/>
-              <text x="50%" y="54%" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold" dy=".3em" fontFamily="Arial, sans-serif">CMS</text>
+              <text x="50%" y="54%" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold" dy=".3em" fontFamily="Arial, sans-serif" >CMS</text>
             </svg>
             <span className="text-xl font-bold text-blue-700">CMS Project</span>
           </div>
