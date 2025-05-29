@@ -1,16 +1,25 @@
-import React from 'react'
-
+import React, { useContext, useState } from 'react'
+import Auth from '../AuthContest/Auth'
+import { AuthProvider } from '../AuthContest/Auth';
 export default function Signup() {
+   const [name,setName]=useState('');
+  const {email,setEmail,password,setPassword,addUser}=useContext(Auth)
+
+  function handleSubmit(event){
+    event.preventDefault();
+    addUser(email,password)
+  }
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-4">
       <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8">
         <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">Create Your Account</h1>
-        <form className="space-y-5">
+        <form className="space-y-5" onSubmit={handleSubmit}>
           <div>
             <label className="block text-gray-700 mb-1" htmlFor="username">Username</label>
             <input
               id="username"
               type="text"
+              onChange={(e)=>setName(e.target.value)}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your username"
               required
@@ -21,6 +30,7 @@ export default function Signup() {
             <input
               id="email"
               type="email"
+              onChange={(e)=>setEmail(e.target.value)}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your email"
               required
@@ -31,18 +41,9 @@ export default function Signup() {
             <input
               id="password"
               type="password"
+              onChange={(e)=>setPassword(e.target.value)}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your password"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700 mb-1" htmlFor="confirmPassword">Confirm Password</label>
-            <input
-              id="confirmPassword"
-              type="password"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Confirm your password"
               required
             />
           </div>

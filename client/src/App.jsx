@@ -1,4 +1,5 @@
 
+import { AuthProvider } from './AuthContest/Auth'
 import Approute from './Route/Approute'
 
 import {BrowserRouter} from 'react-router-dom'
@@ -6,10 +7,9 @@ function App() {
  
   return (
     <>
-      <BrowserRouter>
-      
+      <AuthProvider>
         <Approute></Approute>
-      </BrowserRouter>
+      </AuthProvider>
     </>
   )
 }

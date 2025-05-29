@@ -1,16 +1,24 @@
 import React from 'react'
+import { useContext } from 'react'
+import Auth from '../AuthContest/Auth'
 
 export default function Login() {
+  const {email,setEmail,password,setPassword,login}=useContext(Auth)
+  function handleClick(e){
+    e.preventDefault();
+    login(email,password)
+  }
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-4">
       <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Sign In to Your Account</h2>
-        <form className="space-y-5">
+        <form className="space-y-5" onSubmit={handleClick}>
           <div>
             <label className="block text-gray-700 mb-1" htmlFor="email">Email</label>
             <input
               id="email"
               type="email"
+              onChange={e=>setEmail(e.target.value)}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your email"
               required
@@ -20,6 +28,7 @@ export default function Login() {
             <label className="block text-gray-700 mb-1" htmlFor="password">Password</label>
             <input
               id="password"
+              onChange={e=>setPassword(e.target.value)}
               type="password"
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your password"
