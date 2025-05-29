@@ -33,9 +33,9 @@ function AuthProvider({children}){
         setIsauth(false);
         navigate('/Home')
     }
-    function addUser(email,password){
+    function addUser(name,email,password){
         try{
-            userService.addUser(email,password);
+            userService.addUser(name,email,password);
             setIsauth(true)
             Swal.fire({
             title: "Good job!",
