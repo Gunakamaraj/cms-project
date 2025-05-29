@@ -13,11 +13,11 @@
         this.db=JSON.parse(val);
        }
     }
-    addUser(email,password){
+    addUser(name,email,password){
         if(this.authUser(email)){
             throw new Error("user already exisist");
         }
-        this.db.user.push({email,password});
+        this.db.user.push({name,email,password});
         localStorage.removeItem('db');
         localStorage.setItem('db',JSON.stringify(this.db));
     }

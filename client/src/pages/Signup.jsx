@@ -7,7 +7,7 @@ export default function Signup() {
 
   function handleSubmit(event){
     event.preventDefault();
-    addUser(email,password)
+    addUser(name,email,password)
   }
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-4">
