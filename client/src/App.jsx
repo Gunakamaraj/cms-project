@@ -7,10 +7,10 @@ function App() {
  
   return (
     <>
-      {/* <AuthProvider>
+      <AuthProvider>
         <Approute></Approute>
-      </AuthProvider> */}
-      <Todo></Todo>
+      </AuthProvider>
+
     </>
   )
 }
