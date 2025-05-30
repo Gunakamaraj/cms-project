@@ -17,9 +17,30 @@ export default function Layout() {
           </div>
           {/* Navigation Buttons */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full sm:w-auto">
-            <button className="px-4 py-2 rounded-lg text-blue-600 hover:bg-blue-50 transition font-semibold w-full sm:w-auto cursor-pointer">About Us</button>
-            <button className="px-4 py-2 rounded-lg text-blue-600 hover:bg-blue-50 transition font-semibold w-full sm:w-auto cursor-pointer">Collaborate</button>
-            <button className="px-4 py-2 rounded-lg text-blue-600 hover:bg-blue-50 transition font-semibold w-full sm:w-auto cursor-pointer"><Link to={'/'}>Home</Link></button>
+            <button className="px-4 py-2 rounded-lg text-blue-600 font-semibold w-full sm:w-auto cursor-pointer tracking-wider
+              transition-all duration-300 ease-in-out
+              hover:text-white hover:tracking-[2px]
+              hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-500">
+              <Link to={'/About'}>About Us</Link>
+            </button>
+            <button className="px-4 py-2 rounded-lg text-blue-600 font-semibold w-full sm:w-auto cursor-pointer tracking-wider
+              transition-all duration-300 ease-in-out
+              hover:text-white hover:tracking-[2px]
+              hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-500">
+              Collaborate
+            </button>
+            <button className="px-4 py-2 rounded-lg text-blue-600 font-semibold w-full sm:w-auto cursor-pointer tracking-wider
+              transition-all duration-300 ease-in-out
+              hover:text-white hover:tracking-[2px]
+              hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-500">
+             <Link to={'/Dashboard'}> Dashboard</Link>
+            </button>
+            <Link to={'/'} className="px-4 py-2 rounded-lg text-blue-600 font-semibold w-full sm:w-auto cursor-pointer tracking-wider
+              transition-all duration-300 ease-in-out
+              hover:text-white hover:tracking-[2px]
+              hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-500 text-center">
+              Home
+            </Link>
           </div>
         </nav>
       </header>
