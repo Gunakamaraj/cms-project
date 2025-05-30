@@ -7,7 +7,7 @@ import PageNotFound from '../pages/PageNotFound'
 import Layout from '../Layout/Layout'
 import userService from '../service/service'
 import About from '../pages/About'
-import Dashboard from '../pages/Dashboard'
+import Dashboard from '../Dashboard/Dashboard'
 export default function Approute() {
    let path=['/','/Login','/Signup','/Dashboard','/About','*'];
    let ele=[<Home></Home>,<Login></Login>,<Signup></Signup>,<Dashboard></Dashboard>,<About></About>,<PageNotFound></PageNotFound>]

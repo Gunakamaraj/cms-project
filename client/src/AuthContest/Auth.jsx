@@ -19,7 +19,7 @@ function AuthProvider({children}){
             text: "You are LoggedIn",
             icon: "success"
             });
-            navigate('/Home')
+            navigate('/Dashboard')
         }catch(error){
             Swal.fire({
             icon: "error",
@@ -31,6 +31,7 @@ function AuthProvider({children}){
     }
     function logout(){
         setIsauth(false);
+        localStorage.removeItem('db');
         navigate('/Home')
     }
     function addUser(name,email,password){
@@ -42,7 +43,7 @@ function AuthProvider({children}){
             text: "You are LoggedIn",
             icon: "success"
             });
-            navigate('/Home')
+            navigate('/Dashboard')
         }catch(error){
                  Swal.fire({
             icon: "error",
