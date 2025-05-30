@@ -8,11 +8,13 @@ function App() {
  
   return (
     <>
-      {/* <AuthProvider>
+      { <AuthProvider>
         <Approute></Approute>
-      </AuthProvider> */}
-      <Calculator/>
-      
+      </AuthProvider> }
+    
+
+
+
     </>
   )
 }

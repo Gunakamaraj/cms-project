@@ -40,7 +40,6 @@ export default function Layout() {
             </Link>
             <Link
               to="/"
-              onClick={logout}
               className="px-4 py-2 rounded-lg text-blue-600 font-semibold cursor-pointer tracking-wider
                 transition-all duration-300 ease-in-out
                 hover:text-white hover:tracking-[2px]
