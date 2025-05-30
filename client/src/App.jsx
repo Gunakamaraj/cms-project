@@ -10,7 +10,7 @@ function App() {
       <AuthProvider>
         <Approute></Approute>
       </AuthProvider>
-      
+
     </>
   )
 }
